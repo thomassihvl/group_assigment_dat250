@@ -73,3 +73,5 @@ Move into general setup?
 https://codefresh.io/docker-tutorial/java_docker_pipeline/
 
 https://gist.github.com/lordofthelake/5833336
+
+https://intellipaat.com/community/21525/git-untrack-folder-remove-a-folder-from-git-tracking
