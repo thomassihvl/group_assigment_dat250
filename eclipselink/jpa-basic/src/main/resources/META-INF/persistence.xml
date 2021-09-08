@@ -6,7 +6,7 @@
         <class>no.hvl.dat250.jpa.basicexample.Todo</class>
         <properties>
             <property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.EmbeddedDriver"/>
-                      <!-- TODO Change the path in the value here! -->
+                      <!-- TODO Change the path in the value of the property "javax.persistence.jdbc.url" here! -->
             <property name="javax.persistence.jdbc.url"
                       value="jdbc:derby:C:\Source\testdb;create=true"/>
             <property name="javax.persistence.jdbc.user" value="test"/>
