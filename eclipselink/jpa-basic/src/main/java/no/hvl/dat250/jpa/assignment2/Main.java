@@ -1,4 +1,4 @@
-package no.hvl.dat250.jpa.basicexample;
+package no.hvl.dat250.jpa.assignment2;
 
 import java.util.List;
 
