@@ -24,6 +24,9 @@ public class MainTest {
         factory = Persistence.createEntityManagerFactory(Main.PERSISTENCE_UNIT_NAME);
     }
 
+    /**
+     * Try to delete the db directory if you get SQL-Errors.
+     */
     @Test
     public void testDomainModelPersistence() {
         // Run the main class to persist the objects.
