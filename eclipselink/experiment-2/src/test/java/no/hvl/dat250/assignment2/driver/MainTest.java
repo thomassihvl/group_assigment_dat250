@@ -41,8 +41,8 @@ public class MainTest {
         assertThat(person.getName(), is("Max Mustermann"));
 
         // Test address
-        assertThat(person.getAdresses().size(), is(1));
-        Address address = person.getAdresses().iterator().next();
+        assertThat(person.getAddresses().size(), is(1));
+        Address address = person.getAddresses().iterator().next();
 
         assertThat(address.getStreet(), is("Inndalsveien"));
         assertThat(address.getNumber(), is(28));

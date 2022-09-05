@@ -14,7 +14,7 @@ public class Person {
         return null;
     }
 
-    public Collection<Address> getAdresses() {
+    public Collection<Address> getAddresses() {
         // TODO: implement method!
         return null;
     }
