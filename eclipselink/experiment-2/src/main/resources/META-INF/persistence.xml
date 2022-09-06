@@ -13,12 +13,13 @@
         <properties>
             <property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.EmbeddedDriver"/>
             <property name="javax.persistence.jdbc.url"
-                      value="jdbc:derby:./db/experiment2;create=true"/>
+                      value="jdbc:derby:./db/experiment2;create=true"/> <!-- e.g. value="jdbc:derby://localhost:1527/DAT250DB;create=true" -->
             <property name="javax.persistence.jdbc.user" value="test"/>
             <property name="javax.persistence.jdbc.password" value="test"/>
 
             <property name="eclipselink.ddl-generation" value="create-tables"/>
-            <property name="eclipselink.ddl-generation.output-mode" value="database"/>
+            <!--  Or <property name="eclipselink.ddl-generation" value="drop-and-create-tables"/> -->
+            <property name="eclipselink.ddl-generation.output-mode" value="database"/> <!-- value = "both" enables DDL logging -->
         </properties>
 
     </persistence-unit>
