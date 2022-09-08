@@ -17,8 +17,8 @@ public class Pincode {
         return null;
     }
 
-    public int getCount() {
+    public Integer getCount() {
         // TODO: implement method!
-        return 0;
+        return null;
     }
 }
