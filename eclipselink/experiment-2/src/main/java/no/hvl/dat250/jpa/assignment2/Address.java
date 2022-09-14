@@ -1,7 +1,7 @@
 package no.hvl.dat250.jpa.assignment2;
 
 import javax.persistence.*;
-import java.util.Collection;
+import java.util.Set;
 
 @Entity
 public class Address {
@@ -19,7 +19,7 @@ public class Address {
         return null;
     }
 
-    public Collection<Person> getOwners() {
+    public Set<Person> getOwners() {
         // TODO: implement method!
         return null;
     }
