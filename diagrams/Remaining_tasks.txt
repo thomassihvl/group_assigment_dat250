@@ -1,0 +1,4 @@
+kode alt (JPA)
+Fikse architecture
+Samle alle diagrammer inn i PDF (f.eks. fra .ppt)
+Lage presentasjon
