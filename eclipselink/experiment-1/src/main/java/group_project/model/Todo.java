@@ -1,4 +1,4 @@
-package no.hvl.dat250.jpa.assignment2.model;
+package group_project.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

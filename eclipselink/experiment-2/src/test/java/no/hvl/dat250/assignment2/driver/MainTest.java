@@ -1,7 +1,7 @@
 package no.hvl.dat250.assignment2.driver;
 
 import no.hvl.dat250.jpa.assignment2.*;
-import no.hvl.dat250.jpa.assignment2.driver.Main;
+import group_project.driver.Main;
 import org.junit.Before;
 import org.junit.Test;
 

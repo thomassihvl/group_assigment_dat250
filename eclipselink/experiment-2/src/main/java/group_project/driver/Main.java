@@ -1,8 +1,10 @@
-package no.hvl.dat250.jpa.assignment2.driver;
+package group_project.driver;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+
+import group_project.*;
 
 public class Main {
     public static final String PERSISTENCE_UNIT_NAME = "experiment2";
@@ -11,6 +13,20 @@ public class Main {
         EntityManagerFactory factory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
         EntityManager em = factory.createEntityManager();
 
-        // TODO: Persist object world corresponding to the domain model of experiment 2.
+        Poll poll = new Poll();
+        poll.setPollQuestion("Are we stupid?");
+
+        User user = new User();
+        user.setUsername("Bob_Leif69");
+        //user.vote(poll, Vote.YES);
+
+        em.getTransaction().begin();
+
+        em.persist(poll);
+        em.persist(user);
+
+        em.getTransaction().commit();
+        em.close();
+
     }
 }

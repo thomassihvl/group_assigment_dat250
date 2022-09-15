@@ -1,4 +1,4 @@
-package no.hvl.dat250.jpa.assignment2;
+package group_project;
 
 import org.apache.derby.catalog.UUID;
 
@@ -20,9 +20,9 @@ public interface IPoll {
 
     public int getTotalCount();
 
-    public Status getStatus();
+    //public Status getStatus();
 
-    public void setStatus(Status status);
+    //public void setStatus(Status status);
 
     public String getQuestion();
 
