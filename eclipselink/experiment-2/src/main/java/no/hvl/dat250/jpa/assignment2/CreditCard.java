@@ -8,17 +8,17 @@ public class CreditCard {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    public int getNumber() {
-        // TODO: implement method!
-        return 0;
-    }
-
-    public String getBalance() {
+    public Integer getNumber() {
         // TODO: implement method!
         return null;
     }
 
-    public String getLimit() {
+    public Integer getBalance() {
+        // TODO: implement method!
+        return null;
+    }
+
+    public Integer getLimit() {
         // TODO: implement method!
         return null;
     }
