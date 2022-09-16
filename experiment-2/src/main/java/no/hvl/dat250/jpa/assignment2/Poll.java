@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 public class Poll {
     // Classes User and Admin aggregated through the Single Table Strategy
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
     private Long id;
     @ManyToOne
     private User user;

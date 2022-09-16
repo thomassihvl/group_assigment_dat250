@@ -67,6 +67,8 @@ public class Main {
         voters.put(admin.getID(), true);
         privatePoll.setVotes(voters);
 
+
+
         // Begin transaction
         em.getTransaction().begin();
         
@@ -75,7 +77,8 @@ public class Main {
         em.persist(admin);
         em.persist(privatePoll);
         em.persist(publicPoll);
-        
+
+
         em.getTransaction().commit();
         
         // Retrieve persisted objects from db and print

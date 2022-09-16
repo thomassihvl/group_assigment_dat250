@@ -8,7 +8,7 @@ import java.util.Set;
 public class User {
     // Classes User and Admin aggregated through the Single Table Strategy
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
     private Long id;
 
     @Enumerated(EnumType.STRING)
