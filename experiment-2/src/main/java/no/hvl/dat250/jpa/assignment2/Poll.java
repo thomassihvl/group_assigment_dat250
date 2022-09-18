@@ -7,12 +7,13 @@ import java.time.LocalDateTime;
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name="POLL_TYPE")
 public class Poll {
-    // Classes User and Admin aggregated through the Single Table Strategy
+    //
     @Id
     @GeneratedValue
     private Long id;
-    @ManyToOne
-    private User user;
+
+    @ManyToOne(targetEntity = Consumer.class)
+    private Consumer owner;
     private Integer yesCounter;
     private Integer noCounter;
     private Integer totalCount;
@@ -26,13 +27,17 @@ public class Poll {
         return id;
     }
 
-    public User getUser() {
-        return user;
+    public Consumer getConsumer() {
+        return owner;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+
+
+    public void setConsumer(Consumer owner) {
+        this.owner = owner;
     }
+
+
 
     public Integer getYesCounter() {
         return yesCounter;
@@ -89,12 +94,12 @@ public class Poll {
     public void setEndTime(LocalDateTime endTime) {
         this.endTime = endTime;
     }
-
+/*
     @Override
     public String toString() {
         return "Poll{" +
                 "id=" + id +
-                ", user=" + user +
+                ", agent=" + agent +
                 ", yesCounter=" + yesCounter +
                 ", noCounter=" + noCounter +
                 ", totalCount=" + totalCount +
@@ -104,5 +109,7 @@ public class Poll {
                 ", endTime=" + endTime +
                 '}';
     }
+
+ */
 }
 

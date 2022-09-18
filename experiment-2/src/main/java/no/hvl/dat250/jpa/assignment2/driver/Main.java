@@ -24,21 +24,17 @@ public class Main {
         // Create new Poll typ Private
         PrivatePoll privatePoll = new PrivatePoll();
 
-        // Create new User with role Admin
-        User admin = new User();
-        admin.setRole(Role.ADMIN);
+        // Create new Agent with role Admin
+        Admin admin = new Admin();
         admin.setUsername("BingBongFYL");
-        admin.setOwnedPublicPolls(new HashSet<PublicPoll>());
-        admin.setOwnedPrivatePolls(new HashSet<PrivatePoll>());
 
-        // Create new User with role User which owns both polls
-        User user = new User();
-        user.setRole(Role.USER);
-        user.setUsername("BingBongFML");
-        user.setOwnedPrivatePolls(new HashSet<PrivatePoll>(
+        // Create new Agent with role Agent which owns both polls
+        Consumer consumer = new Consumer();
+        consumer.setUsername("BingBongFML");
+        consumer.setOwnedPrivatePolls(new HashSet<PrivatePoll>(
                 Arrays.asList(privatePoll)
         ));
-        user.setOwnedPublicPolls(new HashSet<PublicPoll>(
+        consumer.setOwnedPublicPolls(new HashSet<PublicPoll>(
                 Arrays.asList(publicPoll)
         ));
 
@@ -50,7 +46,7 @@ public class Main {
         publicPoll.setStatus(Status.ACTIVE);
         publicPoll.setStartTime(LocalDateTime.now());
         publicPoll.setEndTime(LocalDateTime.now());
-        publicPoll.setUser(user);
+        publicPoll.setConsumer(consumer);
         publicPoll.setTotalCount(publicPoll.getNoCounter()+ publicPoll.getYesCounter());
 
         // Private Poll setup
@@ -60,11 +56,11 @@ public class Main {
         privatePoll.setStatus(Status.ACTIVE);
         privatePoll.setStartTime(LocalDateTime.now());
         privatePoll.setEndTime(LocalDateTime.now());
-        privatePoll.setUser(user);
+        privatePoll.setConsumer(consumer);
         privatePoll.setTotalCount(publicPoll.getNoCounter()+ publicPoll.getYesCounter());
-        Map<Long, Boolean> voters = new HashMap<Long, Boolean>();
-        voters.put(user.getID(), false);
-        voters.put(admin.getID(), true);
+        Map<String, Boolean> voters = new HashMap<String, Boolean>();
+        voters.put(consumer.getUsername(), false);
+        //voters.put(admin.getUsername(), true);
         privatePoll.setVotes(voters);
 
 
@@ -73,20 +69,23 @@ public class Main {
         em.getTransaction().begin();
         
         // Persist objects
-        em.persist(user);
-        em.persist(admin);
+        em.persist(consumer);
         em.persist(privatePoll);
         em.persist(publicPoll);
 
+        em.persist(admin);
 
+        //em.getTransaction();
         em.getTransaction().commit();
-        
+
+
+        /*
         // Retrieve persisted objects from db and print
         pObjectRetriever or = new pObjectRetriever();
         
         List<String> classNames = new ArrayList<String>(
                 List.of(
-                        "User",
+                        "Agent",
                         "PrivatePoll",
                         "PublicPoll"
                     )
@@ -97,5 +96,7 @@ public class Main {
         }
 
         em.close();
+
+         */
     }
 }
