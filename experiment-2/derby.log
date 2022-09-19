@@ -1,13 +1,13 @@
 ----------------------------------------------------------------
-Mon Sep 19 11:40:04 CEST 2022:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.15.2.0 - (1873585): instance a816c00e-0183-551e-79a7-0000069dbae0 
-on database directory /Users/jonashammerseth/Desktop/DAT250/group_assigment_dat250/experiment-2/db/experiment2 with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@251a69d7 
-Loaded from file:/Users/jonashammerseth/.m2/repository/org/apache/derby/derby/10.15.2.0/derby-10.15.2.0.jar
+Mon Sep 19 13:23:23 CEST 2022:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.15.2.0 - (1873585): instance a816c00e-0183-557d-115e-00000e782568 
+on database directory C:\Users\thoma\Documents\Programming\group_assigment_dat250\experiment-2\db\experiment2 with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@4d7e1886 
+Loaded from file:/C:/Users/thoma/.m2/repository/org/apache/derby/derby/10.15.2.0/derby-10.15.2.0.jar
 java.vendor=Oracle Corporation
-java.runtime.version=17.0.4.1+1-LTS-2
-user.dir=/Users/jonashammerseth/Desktop/DAT250/group_assigment_dat250/experiment-2
-os.name=Mac OS X
-os.arch=x86_64
-os.version=12.5.1
+java.runtime.version=18.0.2.1+1-1
+user.dir=C:\Users\thoma\Documents\Programming\group_assigment_dat250\experiment-2
+os.name=Windows 11
+os.arch=amd64
+os.version=10.0
 derby.system.home=null
 Database Class Loader started - derby.database.classpath=''
