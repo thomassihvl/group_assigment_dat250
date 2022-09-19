@@ -37,8 +37,6 @@ public class Poll {
         this.owner = owner;
     }
 
-
-
     public Integer getYesCounter() {
         return yesCounter;
     }
