@@ -6,28 +6,8 @@ import java.util.Set;
 
 
 @Entity
-//@DiscriminatorValue("CONSUMER")
-public class Consumer {//extends Agent{
-    @Id
-    @GeneratedValue
-    private Long id;
-
-    private String username;
-    // isAuthenticated shouldn't be persisted
-
-    public Long getID() {
-        return id;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-
+@DiscriminatorValue("CONSUMER")
+public class Consumer extends Agent{
 
     @OneToMany(mappedBy = "owner")
     private Set<PrivatePoll> ownedPrivatePolls;

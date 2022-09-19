@@ -5,10 +5,12 @@
     <persistence-unit name="experiment2" transaction-type="RESOURCE_LOCAL">
 
         <class>no.hvl.dat250.jpa.assignment2.Consumer</class>
+        <class>no.hvl.dat250.jpa.assignment2.Admin</class>
+        <class>no.hvl.dat250.jpa.assignment2.Agent</class>
         <class>no.hvl.dat250.jpa.assignment2.Poll</class>
         <class>no.hvl.dat250.jpa.assignment2.PublicPoll</class>
         <class>no.hvl.dat250.jpa.assignment2.PrivatePoll</class>
-        <class>no.hvl.dat250.jpa.assignment2.Admin</class>
+
 
 
 

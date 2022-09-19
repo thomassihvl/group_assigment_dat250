@@ -3,9 +3,9 @@ package no.hvl.dat250.jpa.assignment2;
 import javax.persistence.*;
 import java.util.Set;
 
-//@Entity
-//@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-//@DiscriminatorColumn(name="AGENT_TYPE")
+@Entity
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name="AGENT_TYPE")
 public class Agent {
     /*
     @Override
@@ -25,6 +25,16 @@ public class Agent {
 
     private String username;
     // isAuthenticated shouldn't be persisted
+
+    private String password;
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
     public Long getID() {
         return id;
